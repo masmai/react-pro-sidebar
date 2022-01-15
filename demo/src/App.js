@@ -10,7 +10,7 @@ function App() {
   const [locale, setLocale] = useState('en');
   const [rtl, setRtl] = useState(false);
   const [collapsed, setCollapsed] = useState(false);
-  const [image, setImage] = useState(false);
+  const [image, setImage] = useState(true);
   const [toggled, setToggled] = useState(false);
   const handleCollapsedChange = (checked) => {
     setCollapsed(checked);
@@ -18,7 +18,7 @@ function App() {
 
   const handleRtlChange = (checked) => {
     setRtl(checked);
-    setLocale(checked ? 'ar' : 'en');
+    //setLocale(checked ? 'ar' : 'en');
   };
   const handleImageChange = (checked) => {
     setImage(checked);
@@ -39,6 +39,9 @@ function App() {
           rtl={rtl}
           toggled={toggled}
           handleToggleSidebar={handleToggleSidebar}
+          handleCollapsedChange={handleCollapsedChange}
+          handleImageChange={handleImageChange}
+          handleRtlChange={handleRtlChange}
         />
        
         <Outlet context={[toggled, setToggled]} />;

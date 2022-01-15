@@ -18,7 +18,7 @@ export default {
   },
   en: {
     title: 'React Pro Sidebar',
-    sidebarTitle: 'Pro Sidebar',
+    sidebarTitle: 'PDPA',
     description:
       'React sidebar library with dropdown menus and unlimited number of nested submenus',
     dashboard: 'Dashboard',
