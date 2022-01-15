@@ -3,29 +3,17 @@ import { useIntl } from 'react-intl';
 import Switch from 'react-switch';
 import { FaHeart, FaBars } from 'react-icons/fa';
 import reactLogo from './assets/logo.svg';
-import { useOutletContext } from 'react-router-dom';
-function Main() {
+
+const Main = ({
+  collapsed,
+  rtl,
+  image,
+  handleToggleSidebar,
+  handleCollapsedChange,
+  handleRtlChange,
+  handleImageChange,
+}) => {
   const intl = useIntl();
-  const [locale, setLocale] = useOutletContext();
-  const [rtl, setRtl] = useOutletContext();
-  const [collapsed, setCollapsed] = useOutletContext();
-  const [image, setImage] = useOutletContext();
-  const [toggled, setToggled] = useOutletContext();
-  const handleCollapsedChange = (checked) => {
-    setCollapsed(checked);
-  };
-
-  const handleRtlChange = (checked) => {
-    setRtl(checked);
-    setLocale(checked ? 'ar' : 'en');
-  };
-  const handleImageChange = (checked) => {
-    setImage(checked);
-  };
-
-  const handleToggleSidebar = (value) => {
-    setToggled(value);
-  };
   return (
     <main>
       <div className="btn-toggle" onClick={() => handleToggleSidebar(true)}>
@@ -124,7 +112,6 @@ function Main() {
       </footer>
     </main>
   );
-}
-
+};
 
 export default Main;

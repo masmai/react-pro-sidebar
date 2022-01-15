@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Outlet } from 'react-router-dom';
 import Aside from './Aside';
 import Main from './Main';
 
@@ -33,6 +34,7 @@ function Layout({ setLocale }) {
         toggled={toggled}
         handleToggleSidebar={handleToggleSidebar}
       />
+     
       <Main
         image={image}
         toggled={toggled}

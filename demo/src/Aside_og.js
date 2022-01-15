@@ -41,7 +41,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
       </SidebarHeader>
 
       <SidebarContent>
-        {/* <Menu iconShape="circle">
+        <Menu iconShape="circle">
           <MenuItem
             icon={<FaTachometerAlt />}
             suffix={<span className="badge red">{intl.formatMessage({ id: 'new' })}</span>}
@@ -65,7 +65,7 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
             title={intl.formatMessage({ id: 'withPrefix' })}
             icon={<FaHeart />}
           >
-            <MenuItem>main menu <Link to="/main" /></MenuItem>
+            <MenuItem>{intl.formatMessage({ id: 'submenu' })} 1</MenuItem>
             <MenuItem>{intl.formatMessage({ id: 'submenu' })} 2</MenuItem>
             <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3</MenuItem>
           </SubMenu>
@@ -78,16 +78,11 @@ const Aside = ({ image, collapsed, rtl, toggled, handleToggleSidebar }) => {
               <SubMenu title={`${intl.formatMessage({ id: 'submenu' })} 3.3`}>
                 <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.1 </MenuItem>
                 <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.2 </MenuItem>
-                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.3  <Link to="/" /></MenuItem>
-                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.4 <Link to="/invoices" /></MenuItem>
+                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.3  <Link to="/"/></MenuItem>
+                <MenuItem>{intl.formatMessage({ id: 'submenu' })} 3.3.4 <Link to="/invoices"/></MenuItem>
               </SubMenu>
             </SubMenu>
           </SubMenu>
-        </Menu> */}
-
-        <Menu iconShape="circle">
-          <MenuItem>Invoices <Link to="/invoices" /></MenuItem>
-          <MenuItem>Expenses <Link to="/expenses" /></MenuItem>
         </Menu>
       </SidebarContent>
 
