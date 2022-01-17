@@ -44,7 +44,7 @@ function App() {
           handleRtlChange={handleRtlChange}
         />
        
-        <Outlet context={[toggled, setToggled]} />;
+        <Outlet context={[toggled, setToggled]} />
         
 
       </div>
